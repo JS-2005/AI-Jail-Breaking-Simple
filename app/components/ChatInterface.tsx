@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from 'react';
-import MessageList from './MessageList';
-import MessageInput from './MessageInput';
-
-import Navbar from './Navbar';
+import { useState } from 'react'
+import MessageList from './MessageList'
+import MessageInput from './MessageInput'
+import Navbar from './Navbar'
 
 interface Message {
     id: string;
@@ -45,15 +44,18 @@ const ChatInterface = () => {
     };
 
     return (
-        <div className="flex h-full bg-black overflow-hidden flex-col">
-            <div className="flex-1 flex overflow-hidden">
-                <main className="flex-1 flex flex-col h-full relative w-full">
-                    {/* Chat Area */}
-                    <div className="flex-1 flex flex-col min-w-0 bg-black">
-                        <MessageList messages={messages} isTyping={isTyping} />
-                        <MessageInput onSendMessage={handleSendMessage} disabled={isTyping} />
-                    </div>
-                </main>
+        <div className="flex flex-col h-full">
+            <Navbar />
+            <div className="flex flex-col flex-1 bg-black overflow-hidden">
+                <div className="flex-1 flex overflow-hidden">
+                    <main className="flex-1 flex flex-col h-full relative w-full">
+                        {/* Chat Area */}
+                        <div className="flex-1 flex flex-col min-w-0 bg-black min-h-0">
+                            <MessageList messages={messages} isTyping={isTyping} />
+                            <MessageInput onSendMessage={handleSendMessage} disabled={isTyping} />
+                        </div>
+                    </main>
+                </div>
             </div>
         </div>
     );

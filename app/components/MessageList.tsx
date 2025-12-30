@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 interface Message {
     id: string;
@@ -23,7 +23,7 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isTyping }) => {
     }, [messages, isTyping]);
 
     return (
-        <div className="flex-1 overflow-y-auto p-4 space-y-2 bg-black text-green-500 font-mono scrollbar-thin scrollbar-thumb-green-900 scrollbar-track-black">
+        <div className="flex-1 overflow-y-auto p-4 space-y-2 bg-black text-green-500 font-mono min-h-0">
             {/* Terminal Header Info */}
             <div className="text-xs text-green-800 mb-4 border-b border-green-900 pb-2">
                 &gt; INITIALIZING ENCRYPTED UPLINK... <br />
@@ -43,8 +43,8 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isTyping }) => {
                             [{message.role === 'user' ? 'OPERATOR' : 'SYSTEM_AI'}]_
                         </span>
                         <div className={`text-sm md:text-base leading-relaxed p-2 border-l-2 ${message.role === 'user'
-                                ? 'border-green-500 bg-green-900/10'
-                                : 'border-green-700 bg-black pl-3'
+                            ? 'border-green-500 bg-green-900/10'
+                            : 'border-green-700 bg-black pl-3'
                             }`}>
                             <span className="mr-2 text-green-700">&gt;</span>
                             {message.content}

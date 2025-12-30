@@ -61,19 +61,23 @@ body {
 
 /* Global Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #001100;
+  border-left: 1px solid #003300;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--muted);
-  border: 1px solid var(--border-color);
+  background: #005500;
+  border: 1px solid #00ff00;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--border-color);
+  background: #00ff00;
+  border-color: #00ff00;
+  box-shadow: 0 0 10px #00ff00;
 }

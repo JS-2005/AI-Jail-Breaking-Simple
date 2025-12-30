@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Shield, Key, Terminal } from 'lucide-react';
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         console.log('Login attempt:', { email, password });
     };
@@ -25,18 +25,6 @@ const LoginForm = () => {
                 </div>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                    <div className="space-y-2">
-                        <label className="text-xs font-bold text-green-500 uppercase tracking-widest font-mono flex items-center gap-2">
-                            <Terminal size={12} /> User Identifier
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="ENTER_USERNAME"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full bg-black border border-green-800 text-green-500 px-4 py-3 focus:outline-none focus:border-green-500 focus:shadow-[0_0_10px_rgba(0,255,0,0.3)] transition-all font-mono placeholder-green-900"
-                        />
-                    </div>
 
                     <div className="space-y-2">
                         <label className="text-xs font-bold text-green-500 uppercase tracking-widest font-mono flex items-center gap-2">
@@ -60,7 +48,7 @@ const LoginForm = () => {
                 </form>
 
                 <div className="flex justify-between text-[10px] text-green-800 font-mono border-t border-green-900 pt-3">
-                    <span>ENCRYPTION: AES-256</span>
+                    <span>ENCRYPTED</span>
                     <span className="animate-pulse">STATUS: ONLINE</span>
                 </div>
             </div>
