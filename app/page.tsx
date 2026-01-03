@@ -57,7 +57,7 @@ export default function Page() {
             </FieldGroup>
           </form>
         </div>
-        {display && <Chatbot />}
+        <Chatbot display={display} />
       </div>
       <div className="fixed z-100 bottom-8 right-8 border border-gray-200 p-4 rounded-full bg-white hover:bg-gray-200 cursor-pointer" onClick={() => configDisplay()}>
         <Bot />
