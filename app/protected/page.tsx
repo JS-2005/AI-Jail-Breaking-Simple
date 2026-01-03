@@ -9,7 +9,7 @@ export default function Protected() {
         <div className="flex flex-col h-screen p-4 items-center justify-center">
             <Card className="w-full max-w-sm">
                 <CardHeader>
-                    <CardTitle>Congratulations! You are authorized to use Alpha Insecure 1.0</CardTitle>
+                    <CardTitle>Congratulations! You had been authorized. </CardTitle>
                 </CardHeader>
                 <CardFooter>
                     <Button variant="default" onClick={() => router.replace('/')}>Restart the Game</Button>
