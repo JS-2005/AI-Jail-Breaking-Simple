@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google"; // Import font
-import "./globals.css";
-
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] }); // Configure font
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: "Secure Terminal Link",
-  description: "Restricted Access Only",
+  title: "ALPHA INSECURE 1.0",
+  description: "",
 };
 
 export default function RootLayout({
@@ -16,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono} antialiased`}>
+      <body>
         {children}
       </body>
     </html>
