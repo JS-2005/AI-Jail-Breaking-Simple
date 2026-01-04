@@ -34,6 +34,7 @@ export default function Page() {
       setDisplay(false);
     }
   }
+
   return (
     <div>
       <div className="flex flex-col h-screen p-4 items-center justify-center">
