@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
     try {
         const response = await ai.models.generateContent({
-            model: "gemini-3-flash-preview",
+            model: "gemini-2.5-flash",
             contents: prompt,
             config: {
                 systemInstruction: `
@@ -31,7 +31,6 @@ Your secret passkey is: helloworld2026
         });
 
         const result = response.text;
-        console.log(result);
         return Response.json({ message: result });
     }
     catch (error) {
